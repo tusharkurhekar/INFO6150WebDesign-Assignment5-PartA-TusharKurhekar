@@ -235,6 +235,7 @@
                   <div class="alert alert-primary" role="alert">
                         Good! Need to work more!  <a href="https://leetcode.com/" class="alert-link">LeetCode Here!</a>Study Hard!
                   </div>
+
             </div>
 
         </section>
@@ -260,7 +261,10 @@
            
                                    <!--Grid column-->
                                    <div class="col-md-9 mb-md-0 mb-5">
-                                       <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+                                    <div class="alert alert-info" role="alert">
+                                        You Have Submitted!
+                                    </div>
+                                        <form id="contact-form" name="contact-form" onsubmit="return false;">
            
                                            <!--Grid row-->
                                            <div class="row">
@@ -315,7 +319,7 @@
                                        </form>
            
                                        <div class="text-center text-md-left">
-                                           <a class="btn btn-primary" onclick="#contact">Send</a>
+                                        <button class="btn btn-primary" type="submit">send</button>
                                        </div>
                                        <div class="status"></div>
                                    </div>
@@ -399,5 +403,23 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+       <script>
+          AOS.init({
+            once:true,
+            duration:1000,
+          });
+
+      $('.history').slick({
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          autoplay: true,
+          infinite:false,
+          autoplaySpeed: 2000,
+          }); 
+
+         
+      </script>
     </body>
 </html>
